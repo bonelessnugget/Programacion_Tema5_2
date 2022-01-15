@@ -1,0 +1,45 @@
+/*
+ * Crear una clase llamada Empleado que contenga como datos miembro el nombre y
+el número de empleado, y como métodos miembro leerDatos( ) para leer los datos
+desde teclado y verDatos( ) para mostrarlos en pantalla, además de los getters y
+setters que sean necesarios.
+ */
+import java.util.Scanner;
+public class Empleado {
+private String nombre;
+private int numeroEmpleado;
+Scanner teclado = new Scanner(System.in);
+
+//Getters y Setters
+
+String getNombre() {
+	return nombre;
+}
+
+void setNombre(String nombre) {
+
+}
+
+void setNumeroEmpleado (int numero) {
+
+}
+
+int getNumeroEmpleado() {
+	return numeroEmpleado;
+}
+
+//Metodos
+
+void verDatos() {
+	System.out.println("El nombre del emleado es: " + nombre  + " y su número"
+			+ " de empleado es: " + numeroEmpleado);
+}
+
+void leerDatos() {
+	System.out.println("Introduce el nombre del empleado: ");
+	nombre = teclado.nextLine();
+	System.out.println("Introduce el número del empleado: ");
+	numeroEmpleado = teclado.nextInt();
+	
+}
+}

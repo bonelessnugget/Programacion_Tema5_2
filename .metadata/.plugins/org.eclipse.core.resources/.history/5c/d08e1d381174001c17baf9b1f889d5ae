@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		Empleado empleado = new Empleado();
+		Scanner teclado = new Scanner(System.in);
+		int op;
+		boolean funcionando = true;
+		System.out.println("1 leerDatos, 2 verDatos");
+		op = teclado.nextInt();
+		while (funcionando = true) {
+		switch (op) {
+		case 1: {
+			empleado.leerDatos();
+		}
+		case 2: {
+			empleado.verDatos();
+			funcionando = false;
+		}
+		}
+		}
+		
+
+	}
+
+}

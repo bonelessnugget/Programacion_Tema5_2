@@ -1,0 +1,7 @@
+
+public class Disco {
+String titulo;
+int numeroCanciones;
+double precio;
+String fechaCompra;
+}

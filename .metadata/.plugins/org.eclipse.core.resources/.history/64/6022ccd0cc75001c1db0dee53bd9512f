@@ -1,0 +1,10 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+	Trabajador trabajador = new Trabajador("Migan","S","D",2,3);
+	trabajador.verDatos();
+	Trabajador danielPaun = new Trabajador("Migan2", "D", "Mata", 3,2);
+	danielPaun.verDatos();
+	}
+}

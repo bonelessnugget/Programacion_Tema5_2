@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		Empleado empleado = new Empleado();
+		Scanner teclado = new Scanner(System.in);
+		int op;
+		System.out.println("1 leerDatos, 2 verDatos");
+		
+
+	}
+
+}

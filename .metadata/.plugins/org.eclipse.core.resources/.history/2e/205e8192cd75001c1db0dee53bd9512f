@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main {
+/*
+ * private String nombre;
+private String estadoCivil; C / S
+private String turno; D / N
+private int titulacion; 0 a 4
+private int anosEmpresa;
+ */
+	public static void main(String[] args) {
+	Trabajador trabajador = new Trabajador("Migan","S","D",2,3);
+	trabajador.verDatos();
+	Trabajador danielPaun = new Trabajador("Migan2", "D", "Mata", 3,2);
+	danielPaun.verDatos();
+	}
+}

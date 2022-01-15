@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		int id = 101;
+		String estadoCivil = "C";
+		String turno = "N";
+		int titulacion = 2;
+		int anosEmpresa = 20;
+		String nombre = "Migan";
+		System.out.println("Introduce el id: ");
+		id = teclado.nextInt();
+		while (id > 100 && id < 1) {
+			System.out.println("El id es demasiado grande. ");
+			id = teclado.nextInt();
+		}
+		
+	Trabajador trabajador = new Trabajador(id,nombre,estadoCivil,turno,titulacion,anosEmpresa);
+	trabajador.verDatos();
+	}
+}

@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		String estadoCivil;
+		String turno;
+		int titulacion;
+		int anosEmpresa;
+		String nombre;
+	Scanner teclado = new Scanner(System.in);
+	int id = teclado.nextInt();
+	estadoCivil = teclado.next();
+	turno = teclado.next();
+	titulacion = teclado.nextInt();
+	anosEmpresa = teclado.nextInt();
+	nombre = teclado.next();
+	Trabajador trabajador = new Trabajador(id,nombre,estadoCivil,turno,titulacion,anosEmpresa);
+	trabajador.verDatos();
+	}
+
+}

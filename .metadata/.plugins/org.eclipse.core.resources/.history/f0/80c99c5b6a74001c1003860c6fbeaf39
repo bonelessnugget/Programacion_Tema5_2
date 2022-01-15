@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		int id = 30;
+		String estadoCivil = "C";
+		String turno = "N";
+		int titulacion = 2;
+		int anosEmpresa = 20;
+		String nombre = "Migan";
+	Trabajador trabajador = new Trabajador(id,nombre,estadoCivil,turno,titulacion,anosEmpresa);
+	trabajador.verDatos();
+	}
+
+}
