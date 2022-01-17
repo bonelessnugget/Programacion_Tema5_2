@@ -15,6 +15,7 @@ private float saldo;
 private String codigo;
 private Scanner teclado = new Scanner(System.in);
 private float cantidad;
+private boolean puedoSacar;
 //Constructor
 public CuentaCorriente() {
 }
@@ -43,12 +44,27 @@ public void ingresarSaldo() {
 }
 
 public void retirarSaldo() {
-	System.out.println("Tu saldo es: " + saldo);
-	System.out.println("Introduce la cantidad a retirar:");
-	cantidad = teclado.nextFloat();
-	saldo -= cantidad;
 	System.out.println("Tu nuevo saldo es: " + saldo);
+	if (puedoSacar == false) {
+		System.out.println("No hay saldo suficiente, pulsa return. ");
+	}else if(puedoSacar == true) {
+		System.out.println("Tu saldo es: " + saldo);
+		System.out.println("Introduce la cantidad a retirar:");
+		cantidad = teclado.nextFloat();
+		saldo -= cantidad;
+		System.out.println("Tu nuevo saldo es: " + saldo);
+	}
 }
+
+public void puedoSacar() {
+	if (saldo <= 0) {
+		puedoSacar = false;
+	}else {
+		puedoSacar = true;
+	}
+}
+
+
 
 //Getters y Setters
 
