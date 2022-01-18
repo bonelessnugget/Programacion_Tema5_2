@@ -24,6 +24,15 @@ public class Hora {
 			this.m = teclado.nextInt();
 			System.out.println("Introduce los segundos: ");
 			this.s = teclado.nextInt();
+			while (m >= 60) {
+				m --;
+				s ++;
+			}
+			while (s >= 60) {
+				s--;
+				m++;
+			}
+			break;
 		}
 		
 		case "no": {
@@ -41,13 +50,13 @@ public class Hora {
 		m = teclado.nextInt();
 		System.out.println("Introduce los segundos:");
 		s = teclado.nextInt();
-		if (s >= 60) {
-			s = 0;
-			m +=1;
-			if (m >= 60) {
-				m = 0;
-				h += 1;
-			}
+		while (m >= 60) {
+			m --;
+			s ++;
+		}
+		while (s >= 60) {
+			s--;
+			m++;
 		}
 	}
 	
@@ -58,13 +67,13 @@ public void sumarHora() {
 		m += teclado.nextInt();
 		System.out.println("Introduce segundos: ");
 		s += teclado.nextInt();
-		if (s >= 60) {
-			s = 0;
-			m +=1;
-			if (m >= 60) {
-				m = 0;
-				h += 1;
-			}
+		while (m >= 60) {
+			m --;
+			h++;
+		}
+		while (s >= 60) {
+			s--;
+			m++;
 		}
 	}
 	
@@ -75,13 +84,21 @@ public void sumarHora() {
 		m -= teclado.nextInt();
 		System.out.println("Introduce segundos: ");
 		s -= teclado.nextInt();
-		if (m <= 0) {
-			m = 0;
-			s = 59;
+		while (m < 0) {
+			m ++;
+			h --;
+		}
+		while (s < 0) {
+			s++;
+			m--;
 		}
 	}
 	public void verHora() {
-		System.out.println(h+":"+m+":"+s);
+		if (h < 10 && m < 10 && s < 10) {
+			System.out.println("0"+h + ":"+"0"+m+":"+"0"+s);
+		}else {
+			System.out.println(h+":"+m+":"+s);
+		}
 	}
 	
 }
