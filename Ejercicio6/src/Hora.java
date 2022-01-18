@@ -67,12 +67,12 @@ public void sumarHora() {
 		m += teclado.nextInt();
 		System.out.println("Introduce segundos: ");
 		s += teclado.nextInt();
-		while (m >= 60) {
-			m --;
+		while (m > 60) {
+			m -= 60;
 			h++;
 		}
-		while (s >= 60) {
-			s--;
+		while (s > 60) {
+			s-= 60;
 			m++;
 		}
 	}
@@ -81,17 +81,21 @@ public void sumarHora() {
 		System.out.println("Introduce una hora:");
 		h -= teclado.nextInt();
 		System.out.println("Introduce minutos: ");
-		m -= teclado.nextInt();
+		int min = teclado.nextInt();
 		System.out.println("Introduce segundos: ");
-		s -= teclado.nextInt();
-		while (m < 0) {
-			m ++;
-			h --;
-		}
-		while (s < 0) {
-			s++;
+		int seg = teclado.nextInt();
+		while (s < seg) {
 			m--;
+			s += 60;
 		}
+		System.out.println(s);
+		s = s -seg;
+		while (m < min) {
+			h--;
+			m += 60;
+		}
+		System.out.println(m);
+		m = m - min;
 	}
 	public void verHora() {
 		if (h < 10 && m < 10 && s < 10) {
